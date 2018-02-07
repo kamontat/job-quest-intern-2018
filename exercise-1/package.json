@@ -1,0 +1,25 @@
+{
+  "name": "takemetour",
+  "version": "0.0.1",
+  "description": "take me tour job quest",
+  "main": "-",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamontat/job-quest-intern-2018.git"
+  },
+  "keywords": [
+    "TakeMeTour",
+    "Internship",
+    "Algorithm",
+    "Javascript"
+  ],
+  "author": "Kamontat Chantrachirathumrong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kamontat/job-quest-intern-2018/issues"
+  },
+  "homepage": "https://github.com/kamontat/job-quest-intern-2018#readme"
+}
