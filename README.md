@@ -147,15 +147,25 @@ This part of quest will be a challenging one. You are going to make a simple web
 
 Q1: What is GraphQL and how it is different from REST API?
 
-A1: <insert your answer here>
+A1: The pain point of REST APIs is it need to have `endpoint` of each API and each of them might return unused data so that make request overprice and overload, there also have second way to use RESTful with action body, for example
+
+```
+HTTP https://xx.yy/api POST
+{
+    "action": "getUser",
+    ...
+}
+```
+
+So facebook introduce new way to create APIs using `GraphQL`, instead of create APIs in each of action for client to managing backend, `GraphQL` will provide path so that client can query getting only data whatever they want.
 
 Q2: Please explain how javascript benefits from cross-platform development
 
-A2: <insert your answer here>
+A2: Cross-platform occur because the pain point for mobile development. In the previous development, we need to hire at least 2 expert mobile development in both iOS and Android environment. Cross-platform will created by many of company but the largest society, I think is should be `react-native`. and as it names `react` so it mean create by facebook and the language for development is `javascript` so nowadays javascript language is one of the most valuable language in computer because it can develop in many platform like **frontend** using react/angular/vue, **backend** as nodeJS, **mobile** as react-native, and so on.
 
 Q3: What do you expect to get from during an internship at TakeMeTour?
 
-A3: <insert your answer here>
+A3: Improve my Backend skill including security, database, and optimize code. The correct way to use payment library, caching in web server, and so on. Connection is also my priority that I want to gain in your company.
 
 ## Submitting
 
