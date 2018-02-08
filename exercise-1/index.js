@@ -1,48 +1,5 @@
-const accept_key = (key) => {
-    let key_low = key.toLowerCase();
-    if (key_low === "right" ||
-        key_low === "r")
-        return "right";
-    else if (key_low === "left" ||
-        key_low === "l")
-        return "left";
-    else
-        return null;
-}
-
-const _shift_left = (arr, number) => {
-    let a = [];
-    for (let i = 0; i < number; i++) {
-        a.push(arr.shift());
-    }
-    a.forEach(element => {
-        arr.push(element);
-    });
-    return arr;
-}
-
-const _shift_right = (arr, number) => {
-    let a = [];
-    for (let i = 0; i < number; i++) {
-        a.push(arr.pop());
-    }
-
-    a.forEach(element => {
-        arr.unshift(element);
-    });
-    return arr;
-}
-
-const shift = (option) => {
-    arr = option._all.array
-    length = arr.length
-    number = option._all.number
-    type = option._all.type
-
-    number = number % length
-    if (number == 0) return arr
-    return type === "right" ? _shift_right(arr, number) : _shift_left(arr, number);
-}
+const shift = require("./algorithm").shift;
+const accept_key = require("./algorithm")._accept_key;
 
 const optionDefinitions = [{
     name: "array",

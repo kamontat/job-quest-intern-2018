@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --notify",
+    "test:watch": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
   "dependencies": {
     "command-line-args": "^5.0.2",
     "command-line-usage": "^4.1.0"
+  },
+  "devDependencies": {
+    "jest": "^22.2.1"
   }
 }
