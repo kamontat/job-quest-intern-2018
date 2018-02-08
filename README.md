@@ -16,7 +16,7 @@ Code must be writes in Javascript language. The code will be tested with Node8, 
 [3, 4, 5, 1, 2]
 ```
 
-### Answer
+### Answer-1
 
 - This exercise code is on [exercise-1](./exercise-1) folder.
 - This javascript code is on [algorithm](./exercise-1/algorithm.js) file.
@@ -86,10 +86,42 @@ const _shift = (arr = [], type, number) => {
 - 2.3 Find the hero who got the most **assist**
 - 2.4 Find the hero who got the worst **kill/death ratio** (ratio = kill/death)
 
-Answer:
+### Answer-2
+
+This code below is raw code for each of problem. If you want to see the optimize code, please go to [exercise-2](./exercise-2) folder.
 
 ```js
--- insert your answer here
+const hero = require("./hero.json");
+// 2.1
+const a = hero.reduce((p, c) => {
+    if (p instanceof Number) return Number(c.networth);
+    return p + Number(c.networth);
+}, 0) / hero.length;
+// 2.2
+const _b = hero.filter(h => h.primary_attribute === "intelligent");
+const b = _b.reduce((p, c) => {
+    if (p instanceof Number) return Number(c.level);
+    return p + Number(c.level);
+}, 0) / _b.length;
+// 2.3
+const c = hero.reduce((p, c) => {
+    if (!p) return c;
+    if (p.assist > c.assist) return p;
+    else return c;
+});
+// 2.4
+const d = hero.reduce((p, c) => {
+    if (!p) return c;
+    const kd1 = p.kill / p.death;
+    const kd2 = c.kill / c.death;
+    if (kd1 > kd2) return c;
+    else return p;
+});
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
 ```
 
 ## Simple Web Application: A joke from Chuck Norris
