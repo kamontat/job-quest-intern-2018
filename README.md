@@ -16,9 +16,31 @@ Code must be writes in Javascript language. The code will be tested with Node8, 
 [3, 4, 5, 1, 2]
 ```
 
-Answer:
+### Answer
+
+- This exercise code is on [exercise-1](./exercise-1) folder.
+- This javascript code is on [algorithm](./exercise-1/algorithm.js) file.
+- This also provide CLI command, run via `node index.js <arr> --type right --number 3` or `node index.js --help` for help command.
+- This also have test-case on [algorithm.test](./exercise-1/algorithm.test.js) file, that can run by `npm test` or `npm run test:watch`
 
 ```js
+// reverse type if input number exceed mid of array
+const _rev = (type, number, mid, length) => {
+    let a = number;
+    if (type == "right" && number < mid) {
+        a = length - number
+        type = "left"
+    } else if (type == "left" && number > mid) {
+        a = length - number
+        type = "right"
+    }
+    return {
+        "type": type,
+        "number": a
+    };
+}
+
+// shift to the left
 const _shift_left = (arr, number) => {
     let a = [];
     for (let i = 0; i < number; i++) {
@@ -30,6 +52,7 @@ const _shift_left = (arr, number) => {
     return arr;
 }
 
+// shift to the right
 const _shift_right = (arr, number) => {
     let a = [];
     for (let i = 0; i < number; i++) {
@@ -42,10 +65,17 @@ const _shift_right = (arr, number) => {
     return arr;
 }
 
-const shift = (arr, type, number) => {
-    length = arr.length
+// main method
+const _shift = (arr = [], type, number) => {
+    const length = arr.length
     number = number % length
+    mid = length / 2
     if (number == 0) return arr
+    // optimized time
+    const t = _rev(type, number, mid, length);
+    type = t.type
+    number = t.number
+    // end
     return type === "right" ? _shift_right(arr, number) : _shift_left(arr, number);
 }
 ```
