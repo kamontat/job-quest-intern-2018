@@ -1,0 +1,24 @@
+{
+  "name": "joke-site",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.17.1",
+    "htmlencode": "0.0.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "homepage": "http://kamontat.github.io/job-quest-intern-2018/exercise-3",
+  "devDependencies": {
+    "gh-pages": "^1.1.0"
+  }
+}
